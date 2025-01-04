@@ -142,7 +142,7 @@ def send_analytics(vehicle_list):
         "123456",
 
         # Next we need to name the event being tracked
-        "Paint Job Packer Analytics",
+        "Paint Job Packer Analytics - it's a fork test",
 
         # Now we send a dictionary of all the data we've collected
         {

@@ -22,8 +22,8 @@ except ModuleNotFoundError:
 
 try:
     import library.paintjob as pj # Copying and generating mod files
-    import library.analytics # Simple analytics using RudderStack, see analytics.py for a detailed breakdown
-    import library.webhook as webhook # For notifying me of new crash reports
+    #import library.analytics # Simple analytics using RudderStack, see analytics.py for a detailed breakdown
+    #import library.webhook as webhook # For notifying me of new crash reports
 except ModuleNotFoundError:
     print("Paint Job Packer can't find its library files")
     print("Make sure that the \"library\" folder is in the same directory as packer.py, and it contains all of its files")
@@ -1432,8 +1432,8 @@ class PackerApp:
                         vehicle_codes.append(code_ini[game]["{} [{}]".format(veh.path, veh.mod_author)])
                     except KeyError:
                         vehicle_codes.append("0000")
-                multi_thread_analytics = threading.Thread(target = library.analytics.send_analytics(",".join(vehicle_codes)))
-                multi_thread_analytics.start()
+                #multi_thread_analytics = threading.Thread(target = library.analytics.send_analytics(",".join(vehicle_codes)))
+                #multi_thread_analytics.start()
 
             if not os.path.exists(out_path):
                 os.makedirs(out_path)
